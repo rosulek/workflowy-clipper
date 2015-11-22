@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+
+    "name":        "Clip to WorkFlowy",
+    "description": "Quickly save a bookmark or jot down a quick note into a particular WorkFlowy list",
+    "version":     "1.0",
+    "author":      "Mike Rosulek",
+
+    "browser_action": {
+        "default_icon":  "icon.png",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "activeTab",
+        "https://workflowy.com/*"
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    }
+
+}

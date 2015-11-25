@@ -38,3 +38,4 @@ function refreshWorkflowyData(callback) {
     xhr.send();
     console.log("sending XHR");
 }
+

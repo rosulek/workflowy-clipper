@@ -43,10 +43,20 @@ function initClipperPopup(tab) {
 
     setPopupMode("clip");
 
+
     $("#title").val( tab.title );
     $("#comment").val( tab.url );    
     $("#title").add("#comment").on("focus", function() { $(this).select() });
     $("#title").focus();
+
+    chrome.tabs.executeScript(
+        { code: "window.getSelection().toString();" },
+        function(selection) {
+            var txt = selection[0];
+            if (txt) {
+                $("#comment").val( $("#comment").val() + "\n\n" + txt );
+            }
+    });
 
     $("#inboxlink").attr("href",
         "https://workflowy.com/#/" + localStorage.inbox.substr(24) );
@@ -75,19 +85,19 @@ function initConfigPopup(tab) {
     }
     $("#status").html("Status: " + status);
 
-    chrome.tabs.executeScript(null, {file: "inject.js"});
-
     $("#inboxbutton").on("click", function() {
-        console.log("asking inject.js for current projid...");
-        chrome.tabs.sendMessage(tab.id, {}, function(response) {
-            console.log("inject.js responded with " + response);
-            if (response && response != "None") {
-                localStorage.inbox = response;
-                showSuccessMsg("Clipped items will now appear in this list.");
-            } else {
-                showErrMsg("Problem setting inbox location. Cannot be top-level Workflowy list.");
-            }
-        });
+        console.log("asking page for current project id");
+        chrome.tabs.executeScript(
+            { code: "document.getElementsByClassName(\"project selected\")[0].getAttribute(\"projectid\");" },
+            function(response) {
+                console.log("page responded with " + response);
+                if (response && response != "None") {
+                    localStorage.inbox = response;
+                    showSuccessMsg("Clipped items will now appear in this list.");
+                } else {
+                    showErrMsg("Problem setting inbox location. Cannot be top-level Workflowy list.");
+                }
+            });
     });
 
     $("#resetbutton").on("click", function() {

@@ -26,9 +26,13 @@ Setup the extension:
 
 * Zoom into the list that you want to designate as your inbox. Then in the popup, press "Make current list your inbox".
 
-Clip to WorkFlowy:
+Clip something:
 
 * When visiting a page that you want to save, or whenever you have an idea that you'd like to jot down, just press the WorkFlowy toolbar icon.
+
+## Isn't there already an extension for this?
+
+There is "[Clip to WorkFlowy](https://chrome.google.com/webstore/detail/clip-to-workflowy/cfifjihfoegnccifkcdomdookdckhaah)", but what it does is just copy the current window title + location to the clipboard. Then you go to WorkFlowy yourself and paste it. In contrast, this extension actually adds it an item WorkFlowy for you.
 
 ## To-do:
 

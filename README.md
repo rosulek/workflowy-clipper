@@ -12,9 +12,7 @@ Made available under the MIT license.
 
 Install the Chrome extension:
 
-* Go to [chrome://extensions](chrome://extensions).
-
-* Use your file manager to drag & drop workflowy-clipper.crx into your Chrome window.
+* Get it from the [Chrome store](https://chrome.google.com/webstore/detail/workflowy-clipper/pmolhkonbppmihdpjmgclnclfppjndom?hl=en-US&gl=US)
 
 Setup the extension:
 
@@ -30,6 +28,8 @@ Clip something:
 
 * When visiting a page that you want to save, or whenever you have an idea that you'd like to jot down, just press the WorkFlowy toolbar icon.
 
+* You can also set a keyboard shortcut, by using the "Keyboard shortcuts" link at the bottom of chrome://extensions.
+
 ## Isn't there already an extension for this?
 
 There is "[Clip to WorkFlowy](https://chrome.google.com/webstore/detail/clip-to-workflowy/cfifjihfoegnccifkcdomdookdckhaah)", but what it does is just copy the current window title + location to the clipboard. Then you go to WorkFlowy yourself and paste it. In contrast, this extension actually adds it an item WorkFlowy for you.
@@ -37,3 +37,7 @@ There is "[Clip to WorkFlowy](https://chrome.google.com/webstore/detail/clip-to-
 ## To-do:
 
 * Actively 'push_and_poll' WorkFlowy to detect online/logged-in status.
+
+* Show "busy working" status indicator when clip button is pressed
+
+* Reasonable error handling in the case that inbox destination got deleted

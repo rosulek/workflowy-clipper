@@ -52,7 +52,8 @@ function initClipperPopup(tab) {
     chrome.tabs.executeScript(
         { code: "window.getSelection().toString();" },
         function(selection) {
-            var txt = selection[0];
+            // trim leading/trailing whitespace
+            var txt = selection[0].replace(/^\s+|\s+$/g, "");
             if (txt) {
                 $("#comment").val( $("#comment").val() + "\n\n" + txt );
             }

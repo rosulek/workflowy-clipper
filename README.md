@@ -8,6 +8,8 @@ Made available under the MIT license.
 
 [WorkFlowy](https://workflowy.com) is a minimalist outlining & note-taking application. This Chrome extension allows you to designate a WorkFlowy sublist as your "inbox" and quickly save notes to it.
 
+![screenshot](https://raw.githubusercontent.com/rosulek/workflowy-clipper/master/screens/screen1.png)
+
 ## How to use it
 
 Install the Chrome extension:
@@ -30,10 +32,6 @@ Clip something:
 
 * You can also set a keyboard shortcut, by using the "Keyboard shortcuts" link at the bottom of chrome://extensions.
 
-## Isn't there already an extension for this?
-
-There is "[Clip to WorkFlowy](https://chrome.google.com/webstore/detail/clip-to-workflowy/cfifjihfoegnccifkcdomdookdckhaah)", but what it does is just copy the current window title + location to the clipboard. Then you go to WorkFlowy yourself and paste it. In contrast, this extension actually adds it an item WorkFlowy for you.
-
 ## To-do:
 
 * Actively 'push_and_poll' WorkFlowy to detect online/logged-in status.
@@ -41,3 +39,7 @@ There is "[Clip to WorkFlowy](https://chrome.google.com/webstore/detail/clip-to-
 * Show "busy working" status indicator when clip button is pressed
 
 * Reasonable error handling in the case that inbox destination got deleted
+
+* Option to append/prepend to inbox list.
+
+* Separate configuration screen so that internal workflowy sublists can be clipped as well

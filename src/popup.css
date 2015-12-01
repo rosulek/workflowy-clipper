@@ -1,0 +1,69 @@
+/*
+// WorkFlowy clipper: popup.js
+// by Mike Rosulek <rosulekm@eecs.oregonstate.edu>
+// available under MIT license
+*/
+
+body, input, textarea, a, span, div, button {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+}
+body {
+    background: #f9f9fa;
+}
+
+body        > div        { display: none;  }
+body.clip   > div#clip   { display: block; }
+body.info   > div#info   { display: block; }
+body.config > div#config { display: block; }
+
+/**********/
+body.clip {
+    width: 400px;
+}
+.form input, .form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 7px;
+    border: 1px solid #d6d6d6;
+    padding: 4px;
+}
+.form textarea {
+    height: 80px;
+}
+#clipbutton {
+    padding: 4px;
+    margin-bottom: 8px;
+    float: right;   
+}
+
+/**********/
+body.info {
+    width: 300px;
+}
+#info {
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+    font-style: italic;
+    box-sizing: border-box;
+}
+
+/**********/
+body.config {
+    width: 200px;
+}
+#config {
+    width: 100%;
+    padding: 18px;
+    text-align: center;
+    box-sizing: border-box;
+}
+#config button {
+    padding: 4px;
+    margin: 8px;
+}
+#status {
+    margin-bottom: 8px;
+}
+
